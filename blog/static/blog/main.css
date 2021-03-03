@@ -1,10 +1,10 @@
 :root {
-    --muted-color: rgba(255, 255, 255, 0.5);
+    --muted-color: rgba(129, 126, 126, 0.5);
 }
 
 
 body {
-  background: #28324c;
+  background: #7061a8;
   color: var(--muted-color);
   margin-top: 5rem;
 }
@@ -18,7 +18,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #36405e;
+  background-color: #5537ff;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -34,7 +34,7 @@ ul {
 }
 
 .content-section {
-  background: #36405e;
+  background: #37c6ff;
   padding: 10px 10px;
   margin-bottom: 20px;
 }
@@ -42,7 +42,7 @@ ul {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #eb4545
 }
 
 .article-metadata a:hover {
@@ -103,7 +103,7 @@ article {
 
 .btn:active, .btn-outline-primary:hover {
     color: #00FBD7 !important;
-    background-color: #36405e !important;
+    background-color: #000000 !important;
     border-color: #00FBD7 !important;
 }
 
@@ -112,7 +112,7 @@ article {
 }
 
 .form-control {
-    background-color: #36405e !important;
+    background-color: #37c6ff !important;
     color: var(--muted-color) !important;
     box-shadow: 0 0 0 0 !important;
 }
@@ -125,7 +125,7 @@ textarea:focus, input:focus {
 
 .alert-success {
     color: #00FBD7;
-    background-color: #36405e;
+    background-color: #37c6ff;
     border-color: #00FBD7;
 }
 
@@ -135,7 +135,7 @@ textarea:focus, input:focus {
 
 .btn-info {
     color: white;
-    background-color: #36405e;
+    background-color: #37c6ff;
     border-color: white;
 }
 
@@ -146,13 +146,13 @@ textarea:focus, input:focus {
 
 .btn-outline-secondary:hover {
     color: #00FBD7 !important;
-    background-color: #36405e !important;
+    background-color: #37c6ff !important;
     border-color: #00FBD7 !important;
 }
 
 .alert-danger {
     color: #ff00f0 !important;
-    background-color: #36405e !important;
+    background-color: #f8c009 !important;
     border-color: #ff00f0 !important;
 }
 
@@ -176,13 +176,13 @@ ul {
 .hovered-tweet:hover {
     -webkit-transition: background-color ease-in-out .2s;
     -webkit-transition: border ease-in-out .2s;
-    background-color: #454f6f !important;
+    background-color: #57f10f !important;
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
 input[type="file"]::-webkit-file-upload-button {
     color: white !important;
-    background-color: #36405e !important;
+    background-color: #f1b50f !important;
     border-radius: 4px;
     border: 1px solid white;
 }
@@ -190,3 +190,4 @@ input[type="file"]::-webkit-file-upload-button {
 .follow-click:hover {
     color: #00FBD7 !important;
 }
+

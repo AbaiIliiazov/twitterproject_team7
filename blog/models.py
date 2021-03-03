@@ -10,7 +10,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.content[:5]
+        return self.content[:15]
 
     @property
     def number_of_comments(self):
@@ -18,7 +18,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    content = models.TextField(max_length=150)
+    content = models.TextField(max_length=120)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     post_connected = models.ForeignKey(Post, on_delete=models.CASCADE)

@@ -7,14 +7,12 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Count
 from .forms import NewCommentForm
-
+from django.db.models import Q
 
 def is_users(post_user, logged_user):
     return post_user == logged_user
 
-
-PAGINATION_COUNT = 5
-
+PAGINATION_COUNT = 3
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
@@ -46,6 +44,16 @@ class PostListView(LoginRequiredMixin, ListView):
             follows.append(obj.follow_user)
         return Post.objects.filter(author__in=follows).order_by('-date_posted')
 
+class SearchResultsView(ListView):
+    model = Post
+    template_name = 'search_results.html'
+
+    def get_queryset(self): # new
+        query = self.request.GET.get('q')
+        object_list = Post.objects.filter(
+            Q(name__icontains=query) | Q(state__icontains=query)
+        )
+        return object_list
 
 class UserPostListView(LoginRequiredMixin, ListView):
     model = Post
